@@ -254,10 +254,10 @@ languages
     
 }
 
-.language__grid{
+.language__grid {
+
     display: grid;
     gap:40px;
-    grid-template-columns: repeat(4,1fr);
     padding-bottom: 40px;
  
 }
@@ -468,6 +468,13 @@ footer{
         font-size: 18px;
     }
 
+    .row .language__grid {
+        display: grid;
+        justify-content: space-around;
+        grid-template-columns: repeat(2,0);
+        padding-right: 64px;
+       }
+
     .project__description {
         padding-right: 30px;
         left: 30px ;
@@ -486,6 +493,7 @@ footer{
 /*small phones */
 
 @media (max-width: 500px) {
+
 
     .nav__link:not(:last-child) {
         display: none;
@@ -520,5 +528,13 @@ footer{
 
     .project__description--links{
         text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .language__grid {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
     }
 }
